@@ -1,0 +1,7 @@
+# FastAPI requirements
+fastapi
+uvicorn[standard]
+
+# production requirements
+gunicorn
+ 
