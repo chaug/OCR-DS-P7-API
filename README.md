@@ -44,3 +44,27 @@ You can also check services with the `humao.rest-client` VSC plugin:
 For the second test file, you need to copy `./test/api/.env.sample` file as `./test/api/.env` and change the contained values to your setup.
 See the [plugin documentation](https://github.com/Huachao/vscode-restclient) and [dotenv's one](https://github.com/motdotla/dotenv) for more information
 
+
+## Deployment targets
+
+### With docker
+
+You can build an image and run a container from it, to expose your services under port 80:
+```bash
+DOCKER_IMAGE=my-fastapi
+
+# build image
+docker build -t ${DOCKER_IMAGE} .
+
+# run image for local test (interactive and auto remove at stop time)
+docker run -i --rm -p 80:80 ${DOCKER_IMAGE}
+
+# run image as a daemon
+docker run -d -p 80:80 ${DOCKER_IMAGE}
+```
+
+
+### With Heroku 
+
+
+### With deta.sh

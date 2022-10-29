@@ -24,6 +24,12 @@ def hello_world():
     "message" : "Hello World!",
   }
 
+@app.get("/echo/{message}")
+def echo(message: str):
+  return {
+    "message" : message,
+  }
+
 
 #################################################
 

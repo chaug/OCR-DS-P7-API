@@ -7,3 +7,7 @@
 GET {{BASE_URL}}/
 
 ###
+
+GET {{BASE_URL}}/echo/thing
+
+###
