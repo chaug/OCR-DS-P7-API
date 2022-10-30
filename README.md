@@ -66,5 +66,34 @@ docker run -d -p 80:80 ${DOCKER_IMAGE}
 
 ### With Heroku 
 
+TODO
+
 
 ### With deta.sh
+
+[Official documentation](https://fastapi.tiangolo.com/deployment/deta/)
+
+Install the CLI and login:
+```bash
+# with powershell (Windows)
+iwr https://get.deta.dev/cli.ps1 -useb | iex
+# with bash (Linux, macOS)
+curl -fsSL https://get.deta.dev/cli.sh | sh
+
+deta version
+# deta v1.3.3-beta x86_64-windows
+
+deta login
+```
+
+Create a project (from the UI)
+
+Create deta micro (runtime unit):
+```bash
+cd app
+cp ../requirements.txt .
+deta new --project OCR-DS-P7-API-deta --name fastapi
+```
+
+You should then have a returned endpoint. You can test its swagger:
+* https://xxxxxx.deta.dev/docs

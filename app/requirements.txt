@@ -1,0 +1,5 @@
+fastapi
+
+# force 1.1
+deta
+python-multipart
